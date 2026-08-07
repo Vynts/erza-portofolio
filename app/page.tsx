@@ -18,14 +18,14 @@ export default function Home() {
                 Alvinza Erza Farandhika
               </h1>
               <p className="text-base sm:text-lg text-[#58a6ff] font-medium tracking-wide notranslate">
-                Junior Backend Developer | Cloud Computing Enthusiast
+                Junior DevOps Engineer | Backend Developer | Cloud Enthusiast
               </p>
             </div>
             
             <p className="leading-relaxed text-[#8b949e] text-sm sm:text-base max-w-2xl mx-auto md:mx-0">
-              Halo, saya Erza, seorang Backend Developer yang antusias dalam membangun aplikasi web yang kokoh dan efesien.
+              Halo, saya Erza! Saya berfokus di bidang Cloud & DevOps, dengan latar belakang kuat sebagai Backend Developer (Python).
               <br/><br/>
-              Berfokus pada Python, saya mendalami pengembangan web serta perancangan arsitektur database relasional. Saya juga memiliki ketertarikan kuat di bidang infrastruktur cloud dan senang mempelajari bagaimana sistem backend terintegrasi dengan lingkungan penyebaran modern.
+              Saya mengelola infrastruktur cloud, sistem kontainer Docker, serta otomatisasi deployment aplikasi. Kombinasi kemampuan koding backend dan pengelolaan server membantu saya memastikan aplikasi berjalan lancar, aman, dan siap rilis dari lokal hingga ke server produksi.
             </p>
             
             {/* Social Icons */}
