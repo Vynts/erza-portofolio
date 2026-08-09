@@ -380,8 +380,18 @@ export default function ResumePage() {
                   Cloud & DevOps:
                 </span>
                 <span className="text-[#c9d1d9]">
-                  AWS (EC2, RDS, S3, EFS), Docker & Containerization, CI/CD
-                  (GitHub Actions), Cloudflare
+                  AWS (EC2, RDS, S3, EFS, Lambda, API Gateway, SNS, IAM, IoT
+                  Core), Docker & Containerization, CI/CD (GitHub Actions),
+                  Cloudflare
+                </span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-[150px_1fr] gap-2 border-b border-[#30363d]/50 pb-4">
+                <span className="font-semibold text-[#58a6ff] shrink-0">
+                  Monitoring & Observability:
+                </span>
+                <span className="text-[#c9d1d9]">
+                  Prometheus (PromQL, Exporters, Pushgateway), Grafana
+                  (Dashboarding)
                 </span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-[150px_1fr] gap-2 border-b border-[#30363d]/50 pb-4">
@@ -406,14 +416,27 @@ export default function ResumePage() {
                 <span className="font-semibold text-[#58a6ff] shrink-0">
                   Databases:
                 </span>
-                <span className="text-[#c9d1d9]">MySQL, DynamoDB</span>
+                <span className="text-[#c9d1d9]">
+                  Relational Databases (MySQL, SQL Querying & Schema Design),
+                  DynamoDB (AWS NoSQL)
+                </span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-[150px_1fr] gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-[150px_1fr] gap-2 border-b border-[#30363d]/50 pb-4">
                 <span className="font-semibold text-[#58a6ff] shrink-0">
                   Tools & Platform:
                 </span>
                 <span className="text-[#c9d1d9]">
-                  Git/GitHub, Postman, Figma
+                  Git/GitHub, Postman, Figma, Visual Studio Code, Linux CLI,
+                  Cloudflare
+                </span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-[150px_1fr] gap-2">
+                <span className="font-semibold text-[#58a6ff] shrink-0">
+                  AI & Productivity:
+                </span>
+                <span className="text-[#c9d1d9]">
+                  AI-Assisted Development, Prompt Engineering for Code
+                  Optimization, Debugging & Refactoring
                 </span>
               </div>
             </div>
