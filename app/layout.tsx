@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Alvinza Erza Farandhika" }],
 
   alternates: {
-    canonical: "https://erza.site",
+    canonical: "https://erza.my.id",
   },
 
   robots: {
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     title: "Alvinza Erza Farandhika | Backend Developer",
     description:
       "Portfolio & personal blog of Alvinza Erza Farandhika. Focused on Backend Development with Python (Flask/FastAPI).",
-    url: "https://erza.site",
+    url: "https://erza.my.id",
     siteName: "Alvinza Erza Portfolio",
     locale: "id_ID",
     type: "website",
