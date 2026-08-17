@@ -3,7 +3,9 @@ import { Geist, Geist_Mono, Syne } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GoogleTranslator from "@/components/GoogleTranslator";
+import CursorGlow from "@/components/CursorGlow";
 import "./globals.css";
+import React from "react";
 
 const syne = Syne({
   subsets: ['latin'],
@@ -24,27 +26,20 @@ export const metadata: Metadata = {
   description:
     "Halo! Saya Alvinza Erza Farandhika, seorang Backend Developer yang antusias dalam membangun aplikasi web yang kokoh, efisien, dan andal menggunakan Python (Flask/FastAPI).",
   keywords: [
-    // Personal Branding & Identity
     "Alvinza Erza Farandhika",
     "vynts",
     "Alvinza Erza Farandhika Portfolio",
     "Vynts GitHub Developer",
-
-    // Prestasi & Kompetisi (LKS & Challenge)
     "Alvinza Erza Farandhika LKS Nasional",
     "Finalis LKS Nasional Web Technologies",
     "Juara LKS Lampung Web Application",
     "Lomba Kompetensi Siswa Web Development",
-
-    // Core Roles
     "Backend Developer",
     "Fullstack Developer",
     "DevOps Engineer",
     "Python Backend Developer",
     "Fullstack Python Developer",
     "Cloud Infrastructure Engineer",
-
-    // Tech Stack & Frameworks
     "Python",
     "Flask",
     "FastAPI",
@@ -52,13 +47,9 @@ export const metadata: Metadata = {
     "Flask Web Developer Indonesia",
     "Microservices Engineer Python",
     "Docker & Cloud Deployment",
-
-    // Cloud & Integrasi
     "AWS AI Academy Cloud Engineer",
     "Midtrans Payment Gateway Integration Developer",
     "CI/CD Pipeline Engineer",
-
-    // Geo-SEO (Lokasi)
     "Lampung",
     "Web Developer Lampung",
     "Backend Developer Lampung",
@@ -110,12 +101,11 @@ export default function RootLayout({
       lang="id"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#0d1117] text-[#c9d1d9]">
-        {/* 2. PASANG TRANSLATOR DI ATAS NAVBAR */}
+      <body className="min-h-full flex flex-col bg-[#0d1117] text-[#c9d1d9] relative selection:bg-blue-600 selection:text-white">
+        <CursorGlow />
         <GoogleTranslator />
-
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow relative z-20">{children}</main>
         <Footer />
       </body>
     </html>
