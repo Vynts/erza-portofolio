@@ -73,7 +73,7 @@ export default function Navbar() {
         <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
           <Link
             href="/"
-            className="font-bold text-white text-xl ml-2 fs-5tracking-tight hover:text-[#58a6ff] transition-colors"
+            className="font-bold text-white text-xl ml-1 fs-5tracking-tight hover:text-[#58a6ff] transition-colors"
           >
             Alvinza Erza F
           </Link>
