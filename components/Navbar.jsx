@@ -1,141 +1,232 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+
+const NAV_LINKS = [
+  { href: "/", label: "About" },
+  { href: "/posts", label: "Posts" },
+  { href: "/repositories", label: "Repositories" },
+  { href: "/cv", label: "CV" },
+  { href: "/certifications", label: "Certifications" },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  
-  // State kustom untuk translator kita
   const [bahasaAktif, setBahasaAktif] = useState("ID");
   const [isLangOpen, setIsLangOpen] = useState(false);
 
-  useEffect(() => {
-    // 1. Deteksi scroll untuk background navbar
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener("scroll", handleScroll);
+  const langRef = useRef(null);
+  const pathname = usePathname();
 
-    // 2. Baca cookie bahasa aktif dari Google Translate saat halaman dimuat
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 15);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
     const match = document.cookie.match(new RegExp("(^| )googtrans=([^;]+)"));
-    if (match) {
-      setBahasaAktif(match[2].endsWith("/en") ? "ENG" : "ID");
-    }
+    if (match) setBahasaAktif(match[2].endsWith("/en") ? "ENG" : "ID");
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // 3. Fungsi memanipulasi cookie Google Translate & reload halaman secara instan
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (langRef.current && !langRef.current.contains(event.target)) {
+        setIsLangOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
   const gantiBahasa = (bahasa) => {
-    const domain = window.location.hostname.replace("www", "");
+    const domain = window.location.hostname.replace(/^www\./, "");
     const nilaiCookie = bahasa === "ENG" ? "/id/en" : "/id/id";
 
-    // Set cookie untuk root domain portofolio kamu
     document.cookie = `googtrans=${nilaiCookie}; path=/; domain=${domain};`;
     document.cookie = `googtrans=${nilaiCookie}; path=/;`;
 
     setBahasaAktif(bahasa);
     setIsLangOpen(false);
-    
-    // Refresh halaman agar engine internal browser langsung menerjemahkan halaman
     window.location.reload();
   };
 
   return (
-    <nav 
-      className={`w-full border-b border-[#30363d] sticky top-0 left-0 z-50 transition-all duration-300 notranslate ${
-        isScrolled ? "bg-[#0d1117]/75 backdrop-blur-md py-4" : "bg-[#0d1117] py-6"
+    <nav
+      className={`w-full h-20 sticky top-0 left-0 z-50 border-b transition-colors duration-300 notranslate ${
+        isScrolled
+          ? "bg-[#0d1117]/85 backdrop-blur-md border-[#30363d] shadow-lg"
+          : "bg-[#0d1117] border-transparent"
       }`}
     >
-      <div className="max-w-5xl mx-auto px-3 flex justify-between items-center transition-all duration-300">
+      {/* DIUBAH: Menggunakan max-w-7xl dan px-6 md:px-12 agar lebih melebar ke samping */}
+      <div className="max-w-6xl mx-auto px-6 md:px-12 h-full flex justify-between items-center">
         
-        {/* 1. LOGO */}
-        <Link href="/" className="font-bold text-white text-lg tracking-tight">
-          Alvinza Erza F.
-        </Link>
+        {/* LOGO */}
+        <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+          <Link
+            href="/"
+            className="font-bold text-white text-2xl ml-4 fs-5tracking-tight hover:text-[#58a6ff] transition-colors"
+          >
+            Alvinza Erza F.
+          </Link>
+        </motion.div>
 
-        {/* =========================================================================
-            WADAH NAVIGASI UTAMA
-            ========================================================================= */}
-        <div className="flex items-center space-x-4 md:space-x-6">
+        {/* DESKTOP NAV & ACTIONS */}
+        <div className="flex items-center space-x-3 md:space-x-6">
           
-          {/* A. NAVIGASI DESKTOP */}
-          <div className="hidden md:flex items-center space-x-6 text-sm text-[#8b949e] md:order-1">
-            <Link href="/" className="hover:text-white transition-colors">About</Link>
-            <Link href="/posts" className="hover:text-white transition-colors">Posts</Link>
-            <Link href="/repositories" className="hover:text-white transition-colors">Repositories</Link>
-            <Link href="/cv" className="hover:text-white transition-colors">CV</Link>
-            <Link href="/certifications" className="hover:text-white transition-colors">Certifications</Link>
+          {/* NAVIGASI DESKTOP */}
+          <div className="hidden md:flex items-center space-x-1 relative">
+            {NAV_LINKS.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative px-3.5 py-2 text-sm font-medium transition-colors ${
+                    isActive ? "text-white" : "text-[#8b949e] hover:text-white"
+                  }`}
+                >
+                  {isActive && (
+                    <motion.div
+                      layoutId="active-pill"
+                      className="absolute inset-0 bg-[#21262d] rounded-md -z-10"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
 
-          {/* B. DROPDOWN TRANSLATOR KUSTOM (100% Mengikuti Aturan Sticky) */}
-          <div className="order-1 md:order-2 relative inline-block text-left select-none md:ml-2">
-            <button
+          {/* DROPDOWN TRANSLATOR */}
+          <div className="relative inline-block text-left select-none" ref={langRef}>
+            <motion.button
+              whileTap={{ scale: 0.95 }}
               type="button"
               onClick={() => setIsLangOpen(!isLangOpen)}
-              className="flex items-center gap-1.5 bg-[#161b22] text-[#c9d1d9] border border-[#30363d] px-3 py-1.5 rounded-md text-xs font-semibold cursor-pointer hover:bg-[#1f242c] transition-colors"
+              className="flex items-center gap-2 bg-[#161b22] text-[#c9d1d9] border border-[#30363d] px-3 py-2 rounded-md text-sm font-semibold hover:bg-[#21262d] hover:border-[#8b949e] transition-all focus:outline-none"
             >
+              <svg className="w-4 h-4 text-[#8b949e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m-9 9a9 9 0 019-9" />
+              </svg>
               <span>{bahasaAktif}</span>
-              <span className="text-[9px] opacity-70">▼</span>
-            </button>
+              <motion.svg
+                animate={{ rotate: isLangOpen ? 180 : 0 }}
+                transition={{ duration: 0.2 }}
+                className="w-3.5 h-3.5 text-[#8b949e]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </motion.svg>
+            </motion.button>
 
-            {/* Popup Pilihan Bahasa (Murni ID & ENG, Di bawah Tombol) */}
-            {isLangOpen && (
-              <div className="absolute right-0 mt-2 bg-[#161b22] border border-[#30363d] rounded-md shadow-xl z-50 min-w-[76px] overflow-hidden">
-                <div className="py-0.5">
-                  <button
-                    onClick={() => gantiBahasa("ID")}
-                    className={`block w-full text-left px-3 py-1.5 text-xs transition-colors ${
-                      bahasaAktif === "ID" ? "text-[#58a6ff] bg-[#1f242c] font-bold" : "text-[#c9d1d9] hover:bg-[#1f242c]"
-                    }`}
-                  >
-                    ID
-                  </button>
-                  <button
-                    onClick={() => gantiBahasa("ENG")}
-                    className={`block w-full text-left px-3 py-1.5 text-xs transition-colors ${
-                      bahasaAktif === "ENG" ? "text-[#58a6ff] bg-[#1f242c] font-bold" : "text-[#c9d1d9] hover:bg-[#1f242c]"
-                    }`}
-                  >
-                    ENG
-                  </button>
-                </div>
-              </div>
-            )}
+            {/* POPUP DROPDOWN */}
+            <AnimatePresence>
+              {isLangOpen && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95, y: -6 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95, y: -6 }}
+                  transition={{ duration: 0.15, ease: "easeOut" }}
+                  className="absolute right-0 mt-2 w-32 bg-[#161b22] border border-[#30363d] rounded-md shadow-2xl z-50 overflow-hidden"
+                >
+                  <div className="p-1 space-y-0.5">
+                    <button
+                      onClick={() => gantiBahasa("ID")}
+                      className={`w-full text-left px-3 py-2 text-sm rounded transition-colors ${
+                        bahasaAktif === "ID"
+                          ? "text-[#58a6ff] bg-[#21262d] font-semibold"
+                          : "text-[#c9d1d9] hover:bg-[#21262d] hover:text-white"
+                      }`}
+                    >
+                      Indonesia
+                    </button>
+                    <button
+                      onClick={() => gantiBahasa("ENG")}
+                      className={`w-full text-left px-3 py-2 text-sm rounded transition-colors ${
+                        bahasaAktif === "ENG"
+                          ? "text-[#58a6ff] bg-[#21262d] font-semibold"
+                          : "text-[#c9d1d9] hover:bg-[#21262d] hover:text-white"
+                      }`}
+                    >
+                      English
+                    </button>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
-          {/* C. TOMBOL HAMBURGER MOBILE */}
-          <button
+          {/* HAMBURGER BUTTON MOBILE */}
+          <motion.button
+            whileTap={{ scale: 0.9 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-[#8b949e] hover:text-white p-1 focus:outline-none order-2"
+            className="md:hidden text-[#8b949e] hover:text-white p-2 rounded-md hover:bg-[#161b22] focus:outline-none transition-colors"
             aria-label="Toggle Menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              )}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+              />
             </svg>
-          </button>
+          </motion.button>
 
         </div>
       </div>
 
-      {/* Menu Navigasi Mobile Dropdown */}
-      {isOpen && (
-        <div className="md:hidden bg-[#0d1117]/95 backdrop-blur-lg border-b border-[#30363d] px-6 py-4 absolute top-full left-0 w-full flex flex-col space-y-4 text-sm text-[#8b949e] shadow-lg">
-          <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors py-1">About</Link>
-          <Link href="/posts" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors py-1">Posts</Link>
-          <Link href="/repositories" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors py-1">Repositories</Link>
-          <Link href="/cv" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors py-1">CV</Link>
-          <Link href="/certifications" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors py-1">Certifications</Link>
-        </div>
-      )}
+      {/* MOBILE MENU DROPDOWN */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="md:hidden bg-[#0d1117]/95 backdrop-blur-xl border-b border-[#30363d] px-6 py-4 absolute top-20 left-0 w-full overflow-hidden shadow-2xl"
+          >
+            <div className="flex flex-col space-y-1.5">
+              {NAV_LINKS.map((link, index) => {
+                const isActive = pathname === link.href;
+                return (
+                  <motion.div
+                    key={link.href}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.04 }}
+                  >
+                    <Link
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className={`block px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${
+                        isActive
+                          ? "text-white bg-[#21262d]"
+                          : "text-[#8b949e] hover:text-white hover:bg-[#161b22]"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      {/* CSS Global untuk menyembunyikan elemen sampah bawaan Google Translate jika browser memicunya */}
       <style jsx global>{`
         body > .skiptranslate,
         .goog-te-banner-frame,
