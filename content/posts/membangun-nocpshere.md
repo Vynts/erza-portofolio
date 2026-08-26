@@ -9,7 +9,6 @@ Momen kelulusan sekolah sering kali dipenuhi dengan pertanyaan klasik: *"Ke mana
 
 Nocsphere lahir dari persimpangan antara keberanian mengeksekusi peluang bisnis dan keinginan untuk mengasah kemampuan teknis di tingkat yang lebih tinggi.
 
----
 
 ## 1. Menajamkan Naluri Technopreneur: Validasi Peluang Bisnis
 
@@ -19,7 +18,6 @@ Dari pengamatan tersebut, saya melihat problem nyata di skala lokal yang belum t
 
 Nocsphere saya rancang sebagai **sistem billing MikroTik otomatis untuk jaringan RT/RW Net**. Produk ini dibangun untuk menyelesaikan titik keluhan pengelola jaringan lokal melalui otomatisasi pencatatan pembayaran, integrasi payment gateway, dan kontrol akses jaringan PPPoE pada router MikroTik secara *real-time*. Di titik ini, saya belajar bahwa produk teknologi yang baik selalu berakar dari solusi atas masalah nyata.
 
----
 
 ## 2. Ujian Kemandirian: Mentransformasi Hambatan Menjadi Mentalitas *Solo Founder*
 
@@ -33,7 +31,6 @@ Di sinilah akselerasi pengembangan diri yang paling intensif terjadi. Menjadi *s
 * **Integrasi & Automasi:** Mempelajari dokumentasi spesifik RouterOS MikroTik, WhatsApp gateway, bot Telegram, hingga payment gateway agar seluruh alur transaksi berjalan tanpa kendala.
 * **Manajemen Produk & Mental:** Mengatur prioritas fitur, mengatasi kejenuhan teknis, dan mengambil keputusan strategis sendirian di tengah rumitnya alur logika sistem.
 
----
 
 ## 3. Komitmen pada Proses: Pembuktian Diri yang Masih Berjalan (Ongoing)
 
@@ -43,7 +40,6 @@ Saat ini, status pengembangan Nocsphere masih berada dalam tahap **Ongoing**. Me
 
 Setiap modul billing yang berhasil terintegrasi dan setiap fungsi otomatisasi PPPoE yang tereksekusi dengan mulus di MikroTik adalah validasi atas progres tersebut. Nocsphere kini bukan sekadar aplikasi, melainkan ruang pembuktian atas ketahanan mental, kepemimpinan diri, dan komitmen saya untuk menguasai seni technopreneurship hingga produk ini siap meluncur ke pasar.
 
----
 
 ## 4. Realitas dan Realisasi: Mengapa Menjadi Entrepreneur Itu Sangat Sulit?
 
