@@ -34,7 +34,7 @@ Kondisi tersebut memaksa saya mengambil keputusan penting: menghentikan proyek, 
 
 ## 3. Komitmen pada Proses: Pembuktian Diri yang Masih Berjalan (Ongoing)
 
-Proses membangun startup seorang diri tentu tidak lepas dari kebuntuan logika, eror saat *deployment*, dan kelelahan mental. Namun, setiap kendala teknis yang berhasil diurai justru menjadi indikator pertumbuhan kapasitas diri saya—baik sebagai *engineer* maupun calon pengusaha teknologi.
+Proses membangun startup seorang diri tentu tidak lepas dari kebuntuan logika, eror saat *deployment*, dan kelelahan mental. Namun, setiap kendala teknis yang berhasil diurai justru menjadi indikator pertumbuhan kapasitas diri saya, baik sebagai *engineer* maupun calon pengusaha teknologi.
 
 Saat ini, status pengembangan Nocsphere masih berada dalam tahap **Ongoing**. Meski alur kerja melambat karena seluruh eksekusi kode, pengujian jaringan, hingga validasi keamanan berada di tangan saya sendiri, saya memilih untuk terus konsisten.
 
@@ -51,4 +51,4 @@ Merintis usaha sendiri (*entrepreneurship*), terutama sebagai *solo founder* di 
 
 * **Tekanan Mental dan Kesendirian (*Solitude*):** Ketiadaan teman diskusi (*sounding board*) membuat seluruh keputusan kritis harus ditanggung sendiri, yang rentan memicu kelelahan mental dan *burnout*.
 
-* **Disiplin Diri di Atas Motivasi:** Motivasi awal tidak cukup untuk menjaga keberlanjutan. Kuncinya ada pada **konsistensi eksekusi**—tetap menulis kode, mengurai *bug*, dan melakukan *debugging* di saat logika buntu serta energi terkuras.
+* **Disiplin Diri di Atas Motivasi:** Motivasi awal tidak cukup untuk menjaga keberlanjutan. Kuncinya ada pada **konsistensi eksekusi**, tetap menulis kode, mengurai *bug*, dan melakukan *debugging* di saat logika buntu serta energi terkuras.
