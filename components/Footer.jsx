@@ -18,7 +18,7 @@ export default function Footer() {
           {/* Contact Button */}
           <div className="shrink-0">
             <a
-              href="mailto:emailmu@domain.com"
+              href="mailto:erzafarandhika@gmail.com"
               className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#161b22] hover:bg-[#1c2128] text-xs sm:text-sm font-mono text-white hover:text-[#38bdf8] rounded-xl border border-[#30363d] hover:border-[#424750] transition-all duration-300 group shadow-sm"
             >
               <span>Get in Touch</span>

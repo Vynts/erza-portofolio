@@ -69,7 +69,7 @@ export default function Home() {
                   href="https://www.linkedin.com/in/alvinza-erza-farandhika-7a023637a/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn Alvinza"
+                  aria-label="LinkedIn Erza"
                   className="w-10 h-10 rounded-full border border-[#2b303b] bg-[#161a23]/50 hover:bg-[#1e2330] hover:border-[#424750] hover:text-white transition-all flex items-center justify-center text-base"
                 >
                   <i className="bi bi-linkedin"></i>
@@ -78,14 +78,14 @@ export default function Home() {
                   href="https://www.instagram.com/erzatora"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Instagram Alvinza"
+                  aria-label="Instagram Erza"
                   className="w-10 h-10 rounded-full border border-[#2b303b] bg-[#161a23]/50 hover:bg-[#1e2330] hover:border-[#424750] hover:text-white transition-all flex items-center justify-center text-base"
                 >
                   <i className="bi bi-instagram"></i>
                 </a>
                 <a
-                  href="mailto:vendzaky@gmail.com"
-                  aria-label="Email Alvinza"
+                  href="mailto:erzafarandhika@gmail.com"
+                  aria-label="Email Erza"
                   className="w-10 h-10 rounded-full border border-[#2b303b] bg-[#161a23]/50 hover:bg-[#1e2330] hover:border-[#424750] hover:text-white transition-all flex items-center justify-center text-base"
                 >
                   <i className="bi bi-envelope-fill"></i>
