@@ -1,5 +1,5 @@
 ---
-title: "Kumiverse: Membangun Komunitas Discord dan Arsitektur Server Minecraft Cross-Platform"
+title: "Membangun Komunitas Discord dan Arsitektur Server Minecraft Cross-Platform Kumiverse"
 date: "2026-07-15"
 description: "Hobi yang bertransformasi menjadi proyek teknis. Kisah di balik layar membangun Kumiverse, mengonfigurasi server Minecraft cross-play (Java & Bedrock), hingga otomatisasi bot Discord."
 tags: ["Minecraft", "Discord", "Systems", "Networking", "Self-Hosted"]

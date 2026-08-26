@@ -1,5 +1,5 @@
 ---
-title: "Lebih dari Sekadar Laporan 385 Halaman: Menemukan Passion Sistem di FR Academy"
+title: "Awal dari segalanya, PKL di FR-System Membuat saya suka dengan Developing"
 date: "2026-01-05"
 description: "Kisah di balik perjalanan PKL yang intensif, melelahkan, namun membuka gerbang karier di dunia IT. Dari mempelajari Python dan Flask hingga menemukan sosok inspirasi di Belanda."
 tags: ["Experience", "Backend", "Systems", "Flask"]

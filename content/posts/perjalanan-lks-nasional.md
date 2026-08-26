@@ -1,5 +1,5 @@
 ---
-title: "Menembus Batas di Panggung Nasional: Perjalanan LKS Cloud Computing 2025"
+title: "Perjalanan LKS Cloud Computing Nasional di Tahun 2025"
 date: "2025-11-01"
 description: "Kisah perjuangan mewakili Provinsi Lampung dalam kompetisi LKS Nasional bidang Cloud Computing di Jakarta. Sebuah refleksi tentang kerja keras, mentalitas, dan proses belajar yang tiada henti."
 tags: ["Cloud Computing", "LKS Nasional", "Experience", "AWS"]

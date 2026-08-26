@@ -1,5 +1,5 @@
 ---
-title: "Estafet Perjuangan: Dari Finalis Nasional Menjadi Juri LKS Kota Dan Mentor Juara Provinsi"
+title: "Dari Finalis Nasional Menjadi Juri LKS Kota Dan Mentor Juara Provinsi"
 date: "2026-07-10"
 description: "Kisah perjalanan pasca kelulusan di mana fokus saya terbagi antara membangun startup Nocsphere, menjadi juri LKS tingkat kota, hingga membimbing adik kelas menembus podium juara provinsi."
 tags: ["LKS", "Mentoring", "Cloud Computing", "Experience"]
@@ -36,9 +36,9 @@ Jujur saja, menjalani rutinitas ini sangat melelahkan. Pikiran saya harus terbag
 
 Cerita mengajar ini sebenarnya berawal ketika salah satu guru dari sekolah asal saya meminta bantuan langsung kepada saya. Beliau meminta saya untuk melatih seorang guru dari **SMK Muhammadiyah 1 Sukaraja, Sumatra Selatan**, yang sedang bertugas untuk mencari sekaligus mempersiapkan talenta LKS di sekolahnya. Saya diminta mengajari guru tersebut materi AWS menggunakan modul soal kompetisi yang saya susun dan buat sendiri.
 
-Di sela-sela kesibukan saya melatih guru dari sekolah tersebut dan membimbing adik kelas untuk persiapan lomba, pihak SMK Muhammadiyah 1 Sukaraja rupanya melihat potensi, kepintaran, serta efektivitas saya dalam mentransfer ilmu. Melalui interaksi itu, mereka kemudian memberikan tawaran kerja yang cukup mengejutkan: meminta saya untuk menjadi **guru tetap bagi siswa-siswi di sana** guna mempersiapkan mereka secara langsung menghadapi ajang LKS tahun depan.
+Di sela-sela kesibukan saya melatih guru dari sekolah tersebut dan membimbing adik kelas untuk persiapan lomba, pihak SMK Muhammadiyah 1 Sukaraja rupanya melihat potensi, kepintaran, serta efektivitas saya dalam mentransfer ilmu. Melalui interaksi itu, mereka kemudian memberikan tawaran kerja yang cukup mengejutkan, yaitu meminta saya untuk menjadi **guru tetap bagi siswa-siswi di sana** guna mempersiapkan mereka secara langsung menghadapi ajang LKS tahun depan.
 
-Namun, setelah merenung dan mempertimbangkan matang-matang, **tawaran kerja tersebut akhirnya saya tolak secara baik-baik. Alasan utamanya sangat sederhana: mimpi saya masih terlalu tinggi.** 
+Namun, setelah merenung dan mempertimbangkan matang-matang, **tawaran kerja tersebut akhirnya saya tolak secara baik-baik. Alasan utamanya sangat sederhana yaitu adakah mimpi saya masih tinggi, saya ingin menjadi seorang engineer yang mungkin suatu saat bekerja di coorporate atau bahkan membuat bisnis sendiri.** 
 
 Di usia yang masih sangat muda ini, saya merasa perjalanan saya baru saja dimulai. Masih banyak mimpi besar yang ingin saya kejar terlebih dahulu, mulai dari membesarkan startup **Nocsphere** agar bisa rilis penuh, terus mengeksplorasi arsitektur sistem berskala besar, hingga mempersiapkan diri untuk melompat ke jenjang karier dan pendidikan yang jauh lebih tinggi lagi. Saya tidak ingin cepat merasa puas atau menetap di zona nyaman terlalu dini ketika dunia teknologi yang luas ini masih menunggu untuk saya taklukkan.
 
