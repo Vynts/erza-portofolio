@@ -1,8 +1,8 @@
 ---
-title: "Langkah Setelah Kelulusan: Merintis Nocsphere dan Seni Berjuang Sendiri"
+title: 'Langkah Setelah Kelulusan: Merintis <span class="notranslate" translate="no">Nocsphere</span> dan Seni Berjuang Sendiri'
 date: "2026-06-15"
 description: "Kisah di balik ide awal membangun Nocsphere pasca kelulusan sekolah. Sebuah refleksi tentang peluang bisnis infrastruktur, tantangan mengembangkan proyek startup secara solo, dan komitmen untuk terus berjalan."
-tags: ["Startup", "Nocsphere", "Backend", "Systems", "Ongoing"]
+tags: ['<span class="notranslate" translate="no">Startup</span>', '<span class="notranslate" translate="no">Nocsphere</span>', '<span class="notranslate" translate="no">Backend</span>', '<span class="notranslate" translate="no">System</span>', '<span class="notranslate" translate="no">Ongoing</span>']
 ---
 
 Momen kelulusan sekolah sering kali dipenuhi dengan pertanyaan klasik: *"Ke mana langkah setelah ini?"* Bagi sebagian orang, jalurnya mungkin langsung mencari pekerjaan atau melanjutkan studi. Namun bagi saya, kelulusan adalah titik awal untuk menguji kapasitas diri: melangkah ke dunia **technopreneurship** dengan membangun produk teknologi saya sendiri yang diberi nama **Nocsphere**.
