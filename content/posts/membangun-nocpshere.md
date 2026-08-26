@@ -1,8 +1,8 @@
 ---
-title "Perjalanan Entrepreneur, Merintis Nocsphere dan Berjuang Sendiri"
-date "2026-08-26"
-description "Kisah di balik ide awal membangun Nocsphere pasca kelulusan sekolah. Sebuah refleksi tentang peluang bisnis infrastruktur, tantangan mengembangkan proyek startup secara solo, dan komitmen untuk terus berjalan."
-tags ["Startup", "Nocsphere", "Backend", "Systems", "Ongoing"]
+title: "Perjalanan Entrepreneur, Merintis Nocsphere dan Berjuang Sendiri"
+date: "2026-08-26"
+description: "Kisah di balik ide awal membangun Nocsphere pasca kelulusan sekolah. Sebuah refleksi tentang peluang bisnis infrastruktur, tantangan mengembangkan proyek startup secara solo, dan komitmen untuk terus berjalan."
+tags: ["Startup", "Nocsphere", "Backend", "Systems", "Ongoing"]
 ---
 
 Masa depan dan kesuksesanmu tidak ditentukan oleh motivasi instan melainkan tersembunyi di dalam struktur dan eksekusi harianmu.
