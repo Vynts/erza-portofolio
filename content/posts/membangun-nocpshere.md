@@ -23,12 +23,12 @@ Nocsphere saya rancang sebagai **sistem billing MikroTik otomatis untuk jaringan
 
 Awalnya, proyek ini tidak dirancang sebagai *solo project*. Saya sempat memulai langkah bersama seorang rekan. Namun, prioritas pasca-kelulusan yang berbeda membuat rekan saya tidak dapat melanjutkan keterlibatannya. 
 
-Kondisi tersebut memaksa saya mengambil keputusan penting: menghentikan proyek, atau bertransformasi menjadi *solo founder*. Saya memilih yang kedua.
-
-Di sinilah akselerasi pengembangan diri yang paling intensif terjadi. Menjadi *single fighter* menuntut saya untuk keluar dari zona nyaman teknis dan menguasai berbagai disiplin ilmu sekaligus:
+Kondisi tersebut memaksa saya mengambil keputusan penting: menghentikan proyek, atau bertransformasi menjadi *solo founder*. Saya memilih yang kedua. Di sinilah akselerasi pengembangan diri yang paling intensif terjadi. Menjadi *single fighter* menuntut saya untuk keluar dari zona nyaman teknis dan menguasai berbagai disiplin ilmu sekaligus:
 
 * **Arsitektur & Sistem Backend:** Merancang arsitektur database relasional yang scalable dan membangun API berkinerja tinggi menggunakan FastAPI/Flask.
+
 * **Integrasi & Automasi:** Mempelajari dokumentasi spesifik RouterOS MikroTik, WhatsApp gateway, bot Telegram, hingga payment gateway agar seluruh alur transaksi berjalan tanpa kendala.
+
 * **Manajemen Produk & Mental:** Mengatur prioritas fitur, mengatasi kejenuhan teknis, dan mengambil keputusan strategis sendirian di tengah rumitnya alur logika sistem.
 
 
@@ -46,6 +46,9 @@ Setiap modul billing yang berhasil terintegrasi dan setiap fungsi otomatisasi PP
 Merintis usaha sendiri (*entrepreneurship*), terutama sebagai *solo founder* di bidang teknologi—sering kali diproyeksikan secara romantis melalui cerita kesuksesan yang serba cepat. Namun, kenyataan di lapangan melibatkan beban teknis, operasional, dan psikologis yang intensif:
 
 * **Context Switching dan Multitasking Ekstrem:** Dalam satu hari, seorang *solo founder* harus berpindah peran secara instan dari *System Architect*, *DevOps Specialist*, *Product Manager*, hingga *Business Strategist*. Menyerap dan mengeksekusi peran-peran yang saling berseberangan ini memicu kelelahan kognitif (*cognitive load*) yang sangat tinggi.
+
 * **Ketidakpastian dan Risiko Mandiri:** Berbeda dengan pekerja profesional dengan kompensasi berkala, entrepreneur beroperasi dalam ketidakpastian total tanpa *safety net*. Jika terjadi kegagalan sistem billing atau transaksi, masalah tersebut harus diselesaikan sendiri secara *real-time*.
+
 * **Tekanan Mental dan Kesendirian (*Solitude*):** Ketiadaan teman diskusi (*sounding board*) membuat seluruh keputusan kritis harus ditanggung sendiri, yang rentan memicu kelelahan mental dan *burnout*.
+
 * **Disiplin Diri di Atas Motivasi:** Motivasi awal tidak cukup untuk menjaga keberlanjutan. Kuncinya ada pada **konsistensi eksekusi**—tetap menulis kode, mengurai *bug*, dan melakukan *debugging* di saat logika buntu serta energi terkuras.
