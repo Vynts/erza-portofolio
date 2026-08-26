@@ -115,7 +115,7 @@ export default function ResumePage() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-[#0d1117] text-[#c9d1d9] py-6 sm:py-12 px-4 selection:bg-[#58a6ff]/30 selection:text-white scroll-smooth">
+    <div className="w-full min-h-screen bg-[#0d1117]/70 text-[#c9d1d9] py-6 sm:py-12 px-4 selection:bg-[#58a6ff]/30 selection:text-white scroll-smooth">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 md:gap-8">
         
         {/* Navigation Sidebar */}

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 interface Item {
   id: number;
@@ -99,15 +99,16 @@ const ITEMS_DATA: Item[] = [
 export default function AwardsPage() {
   const [items] = useState<Item[]>(ITEMS_DATA);
   const [filteredItems, setFilteredItems] = useState<Item[]>(ITEMS_DATA);
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const itemsPerPage = 6;
 
   useEffect(() => {
     const query = searchQuery.toLowerCase();
     const filtered = items.filter((item) => {
-      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+      const matchesCategory =
+        selectedCategory === "all" || item.category === selectedCategory;
       const matchesTitle = item.title.toLowerCase().includes(query);
       const matchesIssuer = item.issuer.toLowerCase().includes(query);
       const matchesDate = item.date.toLowerCase().includes(query);
@@ -126,28 +127,28 @@ export default function AwardsPage() {
 
   const paginate = (pageNumber: number) => {
     setCurrentPage(pageNumber);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const awardsCount = items.filter((i) => i.category === 'award').length;
-  const certsCount = items.filter((i) => i.category === 'cert').length;
+  const awardsCount = items.filter((i) => i.category === "award").length;
+  const certsCount = items.filter((i) => i.category === "cert").length;
 
   return (
-    <div className="w-full min-h-screen bg-[#0d1117] text-[#c9d1d9] py-8 sm:py-16 px-4 selection:bg-[#38bdf8]/30 selection:text-white">
+    <div className="w-full min-h-screen bg-[#0d1117]/70 text-[#c9d1d9] py-8 sm:py-16 px-4 selection:bg-[#38bdf8]/30 selection:text-white">
       <div className="max-w-5xl mx-auto space-y-8">
-        
         {/* Header Section */}
         <div className="space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-2">
             <div className="space-y-2">
-              <span className="text-xs font-mono uppercase tracking-widest text-[#8b949e]">
-                Achievements & Credentials
+              <span className="text-[11px] sm:text-xs font-mono uppercase tracking-widest text-[#38bdf8]">
+                // Achievement
               </span>
               <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight notranslate">
                 Awards & Certificates
               </h1>
               <p className="text-sm text-[#8b949e] max-w-md">
-                Daftar pencapaian, penghargaan kompetisi, dan sertifikasi kompetensi.
+                Daftar pencapaian, penghargaan kompetisi, dan sertifikasi
+                kompetensi.
               </p>
             </div>
 
@@ -168,9 +169,9 @@ export default function AwardsPage() {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             <div className="flex items-center bg-[#161b22] border border-[#30363d] p-1 rounded-2xl gap-1 shrink-0">
               <button
-                onClick={() => setSelectedCategory('all')}
+                onClick={() => setSelectedCategory("all")}
                 className={`px-3 py-1.5 rounded-xl text-xs font-mono transition-all ${
-                  selectedCategory === 'all'
+                  selectedCategory === "all"
                     ? "bg-[#30363d] text-white font-semibold"
                     : "text-[#8b949e] hover:text-white"
                 }`}
@@ -178,9 +179,9 @@ export default function AwardsPage() {
                 Semua
               </button>
               <button
-                onClick={() => setSelectedCategory('award')}
+                onClick={() => setSelectedCategory("award")}
                 className={`px-3 py-1.5 rounded-xl text-xs font-mono transition-all ${
-                  selectedCategory === 'award'
+                  selectedCategory === "award"
                     ? "bg-[#38bdf8]/10 text-[#38bdf8] border border-[#38bdf8]/30 font-semibold"
                     : "text-[#8b949e] hover:text-white"
                 }`}
@@ -188,9 +189,9 @@ export default function AwardsPage() {
                 Penghargaan
               </button>
               <button
-                onClick={() => setSelectedCategory('cert')}
+                onClick={() => setSelectedCategory("cert")}
                 className={`px-3 py-1.5 rounded-xl text-xs font-mono transition-all ${
-                  selectedCategory === 'cert'
+                  selectedCategory === "cert"
                     ? "bg-[#38bdf8]/10 text-[#38bdf8] border border-[#38bdf8]/30 font-semibold"
                     : "text-[#8b949e] hover:text-white"
                 }`}
@@ -201,11 +202,21 @@ export default function AwardsPage() {
 
             <div className="relative flex-1">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-[#8b949e]">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
                 </svg>
               </div>
-              <input 
+              <input
                 type="text"
                 placeholder="Cari berdasarkan judul, penerbit, atau tahun..."
                 value={searchQuery}
@@ -229,25 +240,25 @@ export default function AwardsPage() {
               >
                 {/* Image Section */}
                 <div className="relative w-full h-44 bg-[#21262d] overflow-hidden border-b border-[#30363d]">
-                  <img 
-                    src={item.image} 
+                  <img
+                    src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
                       // Fallback jika gambar gagal terisi
-                      (e.target as HTMLElement).style.display = 'none';
+                      (e.target as HTMLElement).style.display = "none";
                     }}
                   />
                   {/* Category Badge Floating on Image */}
                   <div className="absolute top-3 left-3">
                     <span
                       className={`font-mono text-[10px] px-2.5 py-1 rounded-full border backdrop-blur-md ${
-                        item.category === 'award'
-                          ? 'border-[#38bdf8]/50 bg-[#0d1117]/80 text-[#38bdf8]'
-                          : 'border-[#38bdf8]/50 bg-[#0d1117]/80 text-[#38bdf8]'
+                        item.category === "award"
+                          ? "border-[#38bdf8]/50 bg-[#0d1117]/80 text-[#38bdf8]"
+                          : "border-[#38bdf8]/50 bg-[#0d1117]/80 text-[#38bdf8]"
                       }`}
                     >
-                      {item.category === 'award' ? 'Penghargaan' : 'Sertifikat'}
+                      {item.category === "award" ? "Penghargaan" : "Sertifikat"}
                     </span>
                   </div>
                   {/* Date Badge */}
@@ -263,19 +274,32 @@ export default function AwardsPage() {
                       {item.title}
                     </h3>
                     <p className="text-xs font-mono text-[#8b949e]">
-                      Penerbit: <span className="text-[#c9d1d9]">{item.issuer}</span>
+                      Penerbit:{" "}
+                      <span className="text-[#c9d1d9]">{item.issuer}</span>
                     </p>
                   </div>
 
                   {/* Card Footer */}
                   <div className="pt-3 border-t border-[#30363d]/40 flex items-center justify-between text-xs text-[#8b949e]">
                     <span className="font-mono text-[11px] group-hover:text-white transition-colors flex items-center gap-1.5">
-                      <svg className="w-3.5 h-3.5 text-[#8b949e] group-hover:text-[#38bdf8] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      <svg
+                        className="w-3.5 h-3.5 text-[#8b949e] group-hover:text-[#38bdf8] transition-colors"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
                       </svg>
                       Lihat Kredensial
                     </span>
-                    <span className="text-[#38bdf8] group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    <span className="text-[#38bdf8] group-hover:translate-x-1 transition-transform">
+                      &rarr;
+                    </span>
                   </div>
                 </div>
               </a>
@@ -299,19 +323,21 @@ export default function AwardsPage() {
             </button>
 
             <div className="flex items-center gap-1 overflow-x-auto max-w-[200px] sm:max-w-none scrollbar-none">
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
-                <button
-                  key={pageNumber}
-                  onClick={() => paginate(pageNumber)}
-                  className={`w-9 h-9 shrink-0 rounded-xl border text-xs font-mono font-semibold transition-all ${
-                    currentPage === pageNumber
-                      ? "bg-[#38bdf8]/10 border-[#38bdf8] text-[#38bdf8]"
-                      : "bg-[#161b22] border-[#30363d] text-[#8b949e] hover:text-white hover:border-[#424750]"
-                  }`}
-                >
-                  {pageNumber}
-                </button>
-              ))}
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                (pageNumber) => (
+                  <button
+                    key={pageNumber}
+                    onClick={() => paginate(pageNumber)}
+                    className={`w-9 h-9 shrink-0 rounded-xl border text-xs font-mono font-semibold transition-all ${
+                      currentPage === pageNumber
+                        ? "bg-[#38bdf8]/10 border-[#38bdf8] text-[#38bdf8]"
+                        : "bg-[#161b22] border-[#30363d] text-[#8b949e] hover:text-white hover:border-[#424750]"
+                    }`}
+                  >
+                    {pageNumber}
+                  </button>
+                ),
+              )}
             </div>
 
             <button

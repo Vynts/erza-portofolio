@@ -66,7 +66,7 @@ export default async function PostDetailPage({ params }: PostProps) {
   }
 
   return (
-    <div className="w-full min-h-screen bg-[#0d1117] text-[#c9d1d9] py-8 sm:py-16 px-4 sm:px-6 selection:bg-[#38bdf8]/30 selection:text-white">
+    <div className="w-full min-h-screen bg-[#0d1117]/70 text-[#c9d1d9] py-8 sm:py-16 px-4 sm:px-6 selection:bg-[#38bdf8]/30 selection:text-white">
       {/* Diperlebar dari max-w-3xl menjadi max-w-4xl agar membaca lebih lega */}
       <div className="max-w-4xl mx-auto space-y-6">
         

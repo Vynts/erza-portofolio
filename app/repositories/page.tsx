@@ -100,15 +100,15 @@ export default function RepositoriesPage() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#0d1117] text-[#c9d1d9] py-8 sm:py-16 px-4 selection:bg-[#38bdf8]/30 selection:text-white">
+    <div className="w-full min-h-screen bg-[#0d1117]/70 text-[#c9d1d9] py-8 sm:py-16 px-4 selection:bg-[#38bdf8]/30 selection:text-white">
       <div className="max-w-5xl mx-auto space-y-8">
         {/* Header Section */}
         <div className="space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-2">
-            <div className="space-y-2">
+            <div className="">
               <div className="flex items-center gap-2">
-                <span className="text-xs font-mono uppercase tracking-widest text-[#8b949e]">
-                  Open Source & Projects
+                <span className="text-[11px] sm:text-xs font-mono uppercase tracking-widest text-[#38bdf8]">
+                  // Projects
                 </span>
               </div>
               <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight notranslate">

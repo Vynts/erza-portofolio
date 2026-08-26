@@ -23,7 +23,7 @@ export default function PostsClient({
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#0d1117] text-[#c9d1d9] py-8 sm:py-16 px-4 selection:bg-[#38bdf8]/30 selection:text-white">
+    <div className="w-full min-h-screen bg-[#0d1117]/70 text-[#c9d1d9] py-8 sm:py-16 px-4 selection:bg-[#38bdf8]/30 selection:text-white">
       <div className="max-w-5xl mx-auto space-y-8">
         {/* Header Section */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-2">

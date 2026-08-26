@@ -1,15 +1,15 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function CursorGlow() {
   const [mounted, setMounted] = useState(false);
-  
-  // Gunakan koordinat tengah layar sebagai posisi awal agar tidak hilang di pojok
+
   const mouseX = useMotionValue(typeof window !== "undefined" ? window.innerWidth / 2 : 0);
   const mouseY = useMotionValue(typeof window !== "undefined" ? window.innerHeight / 2 : 0);
 
-  const springConfig = { damping: 25, stiffness: 150 };
+  const springConfig = { damping: 30, stiffness: 200 };
   const x = useSpring(mouseX, springConfig);
   const y = useSpring(mouseY, springConfig);
 
@@ -27,16 +27,16 @@ export default function CursorGlow() {
   if (!mounted) return null;
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-10 overflow-hidden">
+    // Gunakan -z-10 agar berada di paling bawah layer root
+    <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
       <motion.div
-        className="absolute h-[400px] w-[400px] rounded-full"
+        className="absolute h-[350px] w-[350px] rounded-full will-change-transform"
         style={{
           x,
           y,
           translateX: "-50%",
           translateY: "-50%",
-          // Opacity ditingkatkan sedikit agar warnanya benar-benar terlihat jelas
-          background: "radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, rgba(37, 99, 235, 0.08) 55%, transparent 80%)",
+          background: "radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(37, 99, 235, 0.05) 50%, transparent 75%)",
           filter: "blur(50px)",
         }}
       />

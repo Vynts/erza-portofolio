@@ -1,6 +1,6 @@
 ---
 title: "Langkah Setelah Kelulusan: Merintis Nocsphere dan Seni Berjuang Sendiri"
-date: "2026-06-15"
+date: "2026-08-26"
 description: "Kisah di balik ide awal membangun Nocsphere pasca kelulusan sekolah. Sebuah refleksi tentang peluang bisnis infrastruktur, tantangan mengembangkan proyek startup secara solo, dan komitmen untuk terus berjalan."
 tags: ["Startup", "Nocsphere", "Backend", "Systems", "Ongoing"]
 ---

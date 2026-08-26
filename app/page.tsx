@@ -7,7 +7,7 @@ export default function Home() {
   const latestPosts = allPosts.slice(0, 2);
 
   return (
-    <main className="min-h-screen bg-[#0d1117] text-[#c9d1d9] px-4 sm:px-6 py-12 sm:py-16 selection:bg-[#58a6ff]/30 selection:text-white">
+    <main className="min-h-screen bg-[#0d1117]/70 text-[#c9d1d9] px-4 sm:px-6 py-12 sm:py-16 selection:bg-[#58a6ff]/30 selection:text-white">
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
