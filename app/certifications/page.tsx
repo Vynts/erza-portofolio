@@ -12,6 +12,12 @@ interface Item {
   credentialUrl: string;
 }
 
+const categories = [
+  { id: "all", label: "Semua" },
+  { id: "award", label: "Penghargaan" },
+  { id: "cert", label: "Sertifikat" },
+];
+
 const ITEMS_DATA: Item[] = [
   {
     id: 1,
@@ -58,17 +64,47 @@ const ITEMS_DATA: Item[] = [
     image: "/certs/toeic.jpg",
     credentialUrl: "/certs/toeic.jpg",
   },
+
+  {
+    id: 6,
+    category: "cert",
+    title: "Participant on Agentic AI Hackathon 2026 - Online Workshop",
+    issuer: "Sokrates",
+    date: "2026",
+    image: "/certs/sokrates-agentic-ai.png",
+    credentialUrl: "/certs/sokrates-agentic-ai.png",
+  },
+  {
+    id: 100,
+    category: "award",
+    title:
+      "Presenter 2nd International Conference on Halal, Science, Technology, and Innovation (ICHaSTI) 2026",
+    issuer: "Faculty of Science and Technology, UIN Raden Intan Lampung",
+    date: "2026",
+    image: "/awards/ichasti.png",
+    credentialUrl: "/awards/ichasti.png",
+  },
   {
     id: 101,
     category: "award",
     title: "Finalis LKS Cloud Computing Nasional",
-    issuer: "LKS Nasional",
+    issuer: "Puspresnas",
     date: "2025",
     image: "/awards/lks-nasional.jpg",
     credentialUrl: "/awards/lks-nasional.jpg",
   },
   {
     id: 102,
+    category: "award",
+    title: "SMIT Puspresnas ALvinza Erza Farandhika",
+    issuer: "Puspresnas",
+    date: "2025",
+    image: "/awards/simt-erza.png",
+    credentialUrl:
+      "https://simt.kemendikdasmen.go.id/resume?id=1LWyaiGkWam194uIq0tpEg&name=alvinza-erza-farandhika",
+  },
+  {
+    id: 103,
     category: "award",
     title: "Juara 1 LKS Cloud Computing Prov. Lampung",
     issuer: "LKS Provinsi",
@@ -77,7 +113,7 @@ const ITEMS_DATA: Item[] = [
     credentialUrl: "/awards/lks-provinsi.jpg",
   },
   {
-    id: 103,
+    id: 104,
     category: "award",
     title: "Medali Perunggu Olympic Ahmad Dahlan (Web Design)",
     issuer: "Olympic Ahmad Dahlan",
@@ -86,7 +122,7 @@ const ITEMS_DATA: Item[] = [
     credentialUrl: "/awards/olympic-ahmad-dahlan.jpg",
   },
   {
-    id: 104,
+    id: 105,
     category: "award",
     title: "Juara 2 LKS Cloud Computing Tingkat Kota Metro",
     issuer: "LKS Kota Metro",
@@ -167,37 +203,23 @@ export default function AwardsPage() {
 
           {/* Filter Bar & Search Input */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-            <div className="flex items-center bg-[#161b22] border border-[#30363d] p-1 rounded-2xl gap-1 shrink-0">
-              <button
-                onClick={() => setSelectedCategory("all")}
-                className={`px-3 py-1.5 rounded-xl text-xs font-mono transition-all ${
-                  selectedCategory === "all"
-                    ? "bg-[#30363d] text-white font-semibold"
-                    : "text-[#8b949e] hover:text-white"
-                }`}
-              >
-                Semua
-              </button>
-              <button
-                onClick={() => setSelectedCategory("award")}
-                className={`px-3 py-1.5 rounded-xl text-xs font-mono transition-all ${
-                  selectedCategory === "award"
-                    ? "bg-[#38bdf8]/10 text-[#38bdf8] border border-[#38bdf8]/30 font-semibold"
-                    : "text-[#8b949e] hover:text-white"
-                }`}
-              >
-                Penghargaan
-              </button>
-              <button
-                onClick={() => setSelectedCategory("cert")}
-                className={`px-3 py-1.5 rounded-xl text-xs font-mono transition-all ${
-                  selectedCategory === "cert"
-                    ? "bg-[#38bdf8]/10 text-[#38bdf8] border border-[#38bdf8]/30 font-semibold"
-                    : "text-[#8b949e] hover:text-white"
-                }`}
-              >
-                Sertifikat
-              </button>
+            <div className="inline-flex items-center bg-[#161b22] border border-[#30363d] p-1 rounded-2xl gap-1 w-fit">
+              {categories.map((cat) => {
+                const isActive = selectedCategory === cat.id;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => setSelectedCategory(cat.id)}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-mono transition-all border ${
+                      isActive
+                        ? "bg-[#30363d] text-white font-semibold border-transparent"
+                        : "border-transparent text-[#8b949e] hover:text-white"
+                    }`}
+                  >
+                    {cat.label}
+                  </button>
+                );
+              })}
             </div>
 
             <div className="relative flex-1">
