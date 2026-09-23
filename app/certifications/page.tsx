@@ -96,7 +96,7 @@ const ITEMS_DATA: Item[] = [
   {
     id: 102,
     category: "award",
-    title: "SMIT Puspresnas ALvinza Erza Farandhika",
+    title: "SMIT Puspresnas Alvinza Erza Farandhika",
     issuer: "Puspresnas",
     date: "2025",
     image: "/awards/simt-erza.png",
